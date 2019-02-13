@@ -1,0 +1,268 @@
+.page_box {
+  width: 100%;
+  padding-bottom: 100rpx;
+}
+
+.top_select_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+}
+
+.icon_box {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}
+
+.icon_box::after {
+  border: none;
+}
+
+.map2Icon {
+  font-size: 38rpx;
+  color: #42b72a;
+}
+
+.location {
+  font-size: 32rpx;
+  max-width: 350rpx;
+  margin: 0;
+  padding: 0 0 0 6rpx;
+  line-height: normal;
+  background: transparent;
+}
+
+.location::after {
+  border: none;
+}
+
+.dingweiIcon {
+  font-size: 32rpx;
+  color: #42b72a;
+  padding: 0 6rpx 0 20rpx;
+}
+
+.relocationBtn {
+  font-size:30rpx;
+  color:#42b72a;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  line-height: normal;
+}
+
+.relocationBtn::after {
+  border: none;
+}
+
+.select {
+  font-size: 30rpx;
+}
+
+.arrowDownIcon {
+  font-size: 36rpx;
+  color: #999;
+  padding-left: 6rpx;
+}
+
+/* 搜索栏 */
+
+.search_bar {
+  height: 66rpx;
+  background: #e5e5e5;
+  border-radius: 32rpx;
+  margin: 0 25rpx 40rpx 25rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search_bar::after {
+  border: none;
+}
+
+.searchIcon {
+  font-size: 30rpx;
+  color: #999;
+}
+
+.search_tip {
+  font-size: 28rpx;
+  color: #999;
+  padding-left: 4rpx;
+}
+
+.input_bar {
+  width: 640rpx;
+  height: 66rpx;
+  background: #e5e5e5;
+  border-radius: 32rpx;
+  margin: 0 25rpx 40rpx 25rpx;
+  padding: 0 30rpx;
+}
+
+/* 登记表 */
+
+.registration_box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.registration_form {
+  width: 345rpx;
+  height: 480rpx;
+  border-radius: 10rpx;
+  box-shadow: 0rpx 1rpx 10rpx 0rpx rgba(148, 148, 148, 0.75);
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 26rpx 20rpx;
+}
+
+.form_pic {
+  width: 345rpx;
+  height: 310rpx;
+  border-radius: 10rpx 10rpx 0rpx 0rpx;
+}
+
+.taks_info_box {
+  height: 170rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 15rpx 10rpx 20rpx 10rpx;
+}
+
+.form_title {
+  font-size: 26rpx;
+  color: #333;
+}
+
+.price_box text:first-child {
+  font-size: 28rpx;
+  color: #42b72a;
+}
+
+.price_box text:nth-child(2) {
+  font-size: 16rpx;
+  color: #a0a0a0;
+}
+
+.bottom_form_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.area_box, .date_box {
+  display: flex;
+  align-items: center;
+}
+
+.mapIcon {
+  font-size: 34rpx;
+  color: #42b72a;
+}
+
+.area_name {
+  font-size: 20rpx;
+  color: #999;
+  padding-left: 10rpx;
+}
+
+.calendarIcon {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.date {
+  font-size: 20rpx;
+  color: #999;
+  padding-left: 6rpx;
+}
+
+/* 顶部下拉菜单 */
+
+.cover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  margin-top: 100rpx;
+  background: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+@keyframes myfirst {
+  from {
+    transform: translateY(-860rpx);
+  }
+
+  to {
+    transform: translateY(0rpx);
+  }
+}
+
+@keyframes mylast {
+  from {
+    transform: translateY(0rpx);
+  }
+
+  to {
+    transform: translateY(-900rpx);
+  }
+}
+
+.test2 {
+  animation: mylast;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.test1 {
+  animation: myfirst;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.test3 {
+  width: 750rpx;
+  height: 260rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 2rpx solid #ededed;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.options_list {
+  display: flex;
+  align-items: center;
+  padding: 34rpx 30rpx 0 30rpx;
+}
+
+.options {
+  font-size: 28rpx;
+  color: #333;
+  width: 640rpx;
+}
+
+.options_active {
+  font-size: 28rpx;
+  color: #42b72a;
+  width: 640rpx;
+}
+
+.hook2Icon {
+  font-size: 24rpx;
+  color: #42b72a;
+}

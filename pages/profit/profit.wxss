@@ -1,0 +1,101 @@
+.page_box {
+  width: 100%;
+  height: 100vh;
+  background: rgb(246,246,246);
+}
+
+.profit_box {
+  width: 100%;
+  height: 566rpx;
+  background: #42b72a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.my_profit {
+  font-size: 36rpx;
+  color: #FFFFFF;
+}
+
+.yesterday_profit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profit_head {
+  font-size: 24rpx;
+  color: #FFFFFF;
+}
+
+.left_money {
+  font-size: 90rpx;
+  color: #FFFFFF;
+}
+
+.yestoday_profit {
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.bottom_record_box {
+  width: 100%;
+  height: 136rpx;
+  background: rgba(91, 191, 72, 0.7);
+  display: flex;
+}
+
+.total_profit, .total_people, .promotion_agency {
+  width: 250rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 24rpx;
+  color: #FFFFFF;
+}
+
+.number {
+  font-size: 30rpx;
+  color: #FFFFFF;
+  padding-top: 10rpx;
+  max-width: 230rpx;
+}
+
+.withdrawal, .profit_detail {
+  width: 100%;
+  height: 100rpx;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.withdrawal_title, .detail_title {
+  display: flex;
+  align-items: center;
+}
+
+.withdrawalIcon, .moneyIcon {
+  font-size: 48rpx;
+  color: #ffaa11;
+  padding-left: 30rpx;
+}
+
+.sec_title {
+  font-size: 32rpx;
+  color: #4b4b4b;
+  padding-left: 20rpx;
+}
+
+.arrowRightIcon {
+  font-size: 34rpx;
+  color: #535353;
+  padding-right: 30rpx;
+}

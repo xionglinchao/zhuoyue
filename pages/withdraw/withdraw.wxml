@@ -1,0 +1,88 @@
+<view>
+  <!-- 银行信息 -->
+  <view class="bank_info" catchtap="showModal">
+    <view class="base_info" wx:if="{{ myBank.length > 0 }}">
+      <image class="bank_pic" src="{{ 'https://www.hzsimple.com' + myBank[bankCardIdx].image }}"></image>
+      <view class="account">
+        <text class="bank_name">{{ myBank[bankCardIdx].bank }}</text>
+        <text class="bank_num">{{ myBank[bankCardIdx].account }}</text>
+      </view>
+    </view>
+    <view wx:else style="font-size:32rpx;">请添加新卡</view>
+    <text class="iconfont icon-arrowRight arrowRightIcon"></text>
+  </view>
+  <!-- 提现 -->
+  <view class="withdraw_box">
+    <view class="money">提现金额</view>
+    <view class="input_box">
+      <text class="iconfont icon-rmb"></text>
+      <input class="input_money" bindinput="moneyInput" type="digit" value="{{ money }}"></input>
+    </view>
+    <view class="total_money">
+      <text class="left_money">可用余额{{ allMoney }}元</text>
+      <text class="withdraw_btn" catchtap="chooseAllMoney">全部提现</text>
+    </view>
+  </view>
+  <view class="confirmBtn" catchtap="withdrawBtnClick" data-id="{{ myBank[bankCardIdx].id }}">提现</view>
+  <view class="withdraw_record" catchtap="toWithdrawRecord">提现记录</view>
+</view>
+<!-- 底部弹出框 -->
+<!-- 屏幕背景变暗的背景 -->
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<!--弹出框  -->
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+  <view class="manage_card">
+    <view class="bank_card_title">
+      <text class="card_tips_one">选择到账银行卡</text>
+      <text class="card_tips_two">请留意各银行到账时间</text>
+    </view>
+    <view class="manage_btn" catchtap="manageBtnClick">{{ manageIdx ? '完成':'管理' }}</view>
+  </view>
+  
+  <scroll-view scroll-y class="bank_list">
+    <!-- 删除银行卡页面 -->
+    <block wx:if="{{ manageIdx }}">
+      <view class="each_card" wx:for="{{ myBank }}" wx:key data-idx="{{ index }}" data-item="{{ item }}">
+        <view class="eac_bank_box">
+          <image class="bank_img" mode="aspectFill" src="{{ 'https://www.hzsimple.com' + item.image }}"></image>
+          <view class="each_bank_info">
+            <text class="each_bank_name">{{ item.bank }} {{ '(' + item.lastFourNumber + ')' }}</text>
+            <text class="max_time">2小时内到账</text>
+          </view>
+        </view>
+        <text class="iconfont icon-delete deleteIcon" catchtap="delBtnClick" data-id="{{ item.id }}"></text>
+      </view>
+    </block>
+    <!-- 选择银行卡页面 -->
+    <block wx:else>
+      <view class="each_card" wx:for="{{ myBank }}" wx:key catchtap="chooseBankCardClick" data-idx="{{ index }}" data-item="{{ item }}">
+        <view class="eac_bank_box">
+          <image class="bank_img" mode="aspectFill" src="{{ 'https://www.hzsimple.com' + item.image }}"></image>
+          <view class="each_bank_info">
+            <text class="each_bank_name">{{ item.bank }} {{ '(' + item.lastFourNumber + ')' }}</text>
+            <text class="max_time">2小时内到账</text>
+          </view>
+        </view>
+        <block wx:if="{{ index == bankCardIdx }}">
+          <view class="choose_dot_box">
+            <text class="green_dot"></text>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="choose_dot_box sec"></view>
+        </block>
+      </view>
+      <view class="new_card_box" catchtap="addNewCard">
+        <text class="use_new_card">使用新卡提现</text>
+        <block wx:if="{{ bankCardIdx == -1 }}">
+          <view class="choose_dot_box">
+            <text class="green_dot"></text>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="choose_dot_box sec"></view>
+        </block>
+      </view>
+    </block>
+  </scroll-view>
+</view>

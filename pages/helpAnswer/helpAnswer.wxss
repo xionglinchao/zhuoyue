@@ -1,0 +1,11 @@
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  padding: 30rpx 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.question_content {
+  padding: 30rpx 20rpx;
+  font-size: 32rpx;
+}

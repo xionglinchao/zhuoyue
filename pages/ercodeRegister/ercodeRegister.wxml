@@ -1,0 +1,6 @@
+<view>
+  <view class="ercode_box">
+    <image class="ercode" src="{{ ercode }}" catchtap="previewImage" data-src="{{ ercode }}"></image>
+    <view class="tips">扫一扫上面的二维码图片，立即注册</view>
+  </view>
+</view>

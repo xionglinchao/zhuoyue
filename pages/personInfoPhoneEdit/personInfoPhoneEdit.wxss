@@ -1,0 +1,56 @@
+page {
+  background: rgba(246, 246, 246, 1);
+}
+.page_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input_box {
+  width: 690rpx;
+  border-bottom: 2rpx solid #42b72a;
+  margin-top:60rpx;
+  display: flex;
+  align-items: center;
+}
+.phoneInput {
+  width: 650rpx;
+  padding: 18rpx 20rpx;
+  font-size: 28rpx;
+}
+.codeInput {
+  width: 468rpx;
+  padding: 18rpx 20rpx;
+  font-size: 28rpx;
+}
+.get_code {
+  font-size: 28rpx;
+  color: #42b72a;
+  padding: 18rpx 20rpx;
+  line-height: normal;
+}
+.get_code::after {
+  border: none;
+}
+.confirm_btn {
+  width: 700rpx;
+  height: 80rpx;
+  background: #42b72a;
+  font-size: 32rpx;
+  color: #fff;
+  border-radius: 6rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90rpx;
+}
+
+.phone_num {
+  width: 690rpx;
+  font-size: 26rpx;
+  color: #3a3a3a;
+  padding-top: 30rpx;
+}
+.next {
+  margin-top: 170rpx;
+}

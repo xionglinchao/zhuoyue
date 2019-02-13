@@ -1,0 +1,14 @@
+<view>
+  <block wx:for="{{ contentlist }}" wx:key>
+    <view class="single_list">
+      <image class="user_photo" src="{{ item.image }}"></image>
+      <view class="user_info">
+        <view class="user_name">
+          <view>{{ item.nickname }}</view>
+          <view>{{ item.create_at }}</view>
+        </view>
+        <view class="promote_id">{{ item.uid }}</view>
+      </view>
+    </view>
+  </block>
+</view>

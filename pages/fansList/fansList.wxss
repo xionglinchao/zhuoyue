@@ -1,0 +1,41 @@
+.single_list {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0 20rpx 30rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.user_photo {
+  width: 94rpx;
+  height: 94rpx;
+  border-radius: 50%;
+}
+
+.user_info {
+  width: 585rpx;
+  display: flex;
+  flex-direction: column;
+  padding-left: 25rpx;
+}
+
+.user_name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user_name view:first-child {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.user_name view:nth-child(2) {
+  font-size: 20rpx;
+  color: #999;
+}
+
+.promote_id {
+  font-size: 26rpx;
+  color: #949494;
+  padding-top: 8rpx;
+}

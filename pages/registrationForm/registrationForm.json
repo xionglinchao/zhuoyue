@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "登记信息",
+  "usingComponents": {
+    "nav": "/templates/loadView/loadView"
+  }
+}

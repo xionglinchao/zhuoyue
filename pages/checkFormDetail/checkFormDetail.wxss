@@ -1,0 +1,145 @@
+@import "../../wxParse/wxParse.wxss";
+
+.page_box {
+  width: 100%;
+}
+
+.scroll_box {
+  width: 100%;
+  padding-bottom: 90rpx;
+}
+
+.pic_box {
+  width: 100%;
+  height: 634rpx;
+}
+
+.form_pic {
+  width: 100%;
+  height: 634rpx;
+  vertical-align: top;
+  background: lightblue;
+}
+
+.title {
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+  margin-top: 40rpx;
+  padding: 0 30rpx;
+}
+
+.icon_box {
+  display: flex;
+  align-items: center;
+  margin: 30rpx 0;
+}
+
+.mapIcon, .calendarIcon {
+  font-size: 36rpx;
+  color: #999;
+  padding-left: 30rpx;
+}
+
+.position, .date {
+  font-size: 24rpx;
+  color: #999;
+  padding-left: 6rpx;
+}
+
+.content_box {
+  padding: 0 30rpx 10rpx 30rpx;
+  font-size: 28rpx;
+}
+
+.more_cont {
+  display: flex;
+  flex-direction: column;
+  border-top: 1rpx solid #eeeeee;
+}
+
+.sec_title {
+  font-size: 32rpx;
+  padding: 30rpx 0 30rpx 30rpx;
+}
+
+.more_pic_box {
+  display: flex;
+  margin: 0 20rpx 20rpx 30rpx;
+}
+
+.cont_pic {
+  width: 165rpx;
+  height: 200rpx;
+  border-radius: 5rpx;
+  background: lightblue;
+  margin-right: 10rpx;
+}
+
+.fixed_box {
+  width: 100%;
+  height: 90rpx;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+}
+
+.people_num_box {
+  width: 500rpx;
+  height: 90rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #FFF;
+  border-top: 1rpx solid #e5e5e5;
+}
+
+.num_record {
+  position: relative;
+}
+
+.personIcon {
+  font-size: 38rpx;
+  color: #666;
+}
+
+.num {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: -10rpx;
+  width: 16rpx;
+  height: 16rpx;
+  border: 1rpx solid #42b72a;
+  border-radius: 50%;
+  color: #42b72a;
+  font-size: 12rpx;
+  text-align: center;
+  line-height: 16rpx;
+}
+
+.num_title {
+  font-size: 18rpx;
+  color: #999;
+}
+
+.check_form {
+  width: 250rpx;
+  height: 90rpx;
+  background: #ff5004;
+  font-size: 28rpx;
+  color: #FFF;
+  text-align: center;
+  line-height: 90rpx;
+}
+
+.receive_click {
+  width: 250rpx;
+  height: 90rpx;
+  background: #42b72a;
+  font-size: 28rpx;
+  color: #FFF;
+  text-align: center;
+  line-height: 90rpx;
+}

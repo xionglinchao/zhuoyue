@@ -1,0 +1,124 @@
+page {
+  width: 100%;
+  background: rgb(246, 246, 246);
+}
+
+.scroll_part {
+  padding-bottom: 100rpx;
+}
+
+.form_box {
+  width: 726rpx;
+  height: 135rpx;
+  background: #FFFFFF;
+  margin: 0rpx 12rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.default {
+  font-size: 30rpx;
+  color: #333;
+  padding-left: 30rpx;
+}
+
+.course_info {
+  display: flex;
+}
+
+.course_pic {
+  width: 95rpx;
+  height: 95rpx;
+  border-radius: 5rpx;
+  margin: 0 12rpx;
+}
+
+.base_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 95rpx;
+}
+
+.form_title {
+  font-size: 28rpx;
+  max-width: 500rpx;
+}
+
+.area_time_box {
+  display: flex;
+  align-items: center;
+}
+
+.area_box, .date_box {
+  display: flex;
+  align-items: center;
+}
+
+.mapIcon {
+  font-size: 38rpx;
+  color: #42b72a;
+}
+
+.area_name, .date {
+  font-size: 20rpx;
+  color: #999999;
+  padding-left: 6rpx;
+}
+
+.calendarIcon {
+  font-size: 30rpx;
+  color: #1a1a1a;
+  padding-left: 40rpx;
+}
+
+.arrowRightIcon {
+  font-size: 32rpx;
+  color: #515151;
+  padding-right: 30rpx;
+}
+
+.color_line_box {
+  width: 100%;
+  height: 2rpx;
+}
+
+.color_line {
+  width: 726rpx;
+  height: 2rpx;
+  vertical-align: top;
+  margin-left: 12rpx;
+}
+
+/* 二维码 */
+.erCode_box {
+  width: 730rpx;
+  height: 834rpx;
+  margin: 16rpx 10rpx 0 10rpx;
+}
+
+.bg_pic {
+  width: 730rpx;
+  height: 834rpx;
+  vertical-align: top;
+  position: relative;
+}
+
+.erCode {
+  width: 280rpx;
+  height: 280rpx;
+  background: #FFFFFF;
+  position: absolute;
+  z-index: 10;
+  top: 294rpx;
+  left: 225rpx;
+}
+
+.tip {
+  font-size: 24rpx;
+  color: #999999;
+  position: absolute;
+  bottom: 10rpx;
+  left: 50rpx;
+}

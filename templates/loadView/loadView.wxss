@@ -1,0 +1,58 @@
+.tab_list {
+  width: 750rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1rpx solid #e5e5e5;
+  position: fixed;
+  bottom: 0;
+  background: #ffffff;
+}
+
+.tab_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150rpx;
+  height: 100rpx;
+}
+
+.icon_title {
+  font-size: 24rpx;
+  color: #959595;
+}
+
+.active {
+  color: #42b72a;
+}
+
+.tab_box:first-child image {
+  width: 44rpx;
+  height: 38rpx;
+  padding: 16rpx 0 8rpx 0;
+}
+
+.tab_box:nth-child(2) image {
+  width: 46rpx;
+  height: 46rpx;
+  padding: 12rpx 0 4rpx 0;
+}
+
+.tab_box:nth-child(3) image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: -30rpx;
+  padding-bottom: 12rpx;
+}
+
+.tab_box:nth-child(4) image {
+  width: 50rpx;
+  height: 48rpx;
+  padding: 12rpx 0 4rpx 0;
+}
+
+.tab_box:nth-child(5) image {
+  width: 100rpx;
+  height: 46rpx;
+  padding: 12rpx 0 4rpx 0;
+}

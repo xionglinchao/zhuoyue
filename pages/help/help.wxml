@@ -1,0 +1,14 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+<view>
+  <view class="hot_question">热点问题</view>
+  <view wx:for="{{ questionList }}" wx:key>
+    <view class="each_question_title" catchtap="showAnswerClick" data-idx="{{ index }}" data-item="{{ item }}">
+      <view>{{ item.title }}</view>
+      <text class="iconfont {{ item.showAnswer ? 'icon-arrowDown':'icon-arrowRight' }} arrrowRightIcon"></text>
+    </view>
+    <!-- <view class="question_content" wx:if="{{ item.showAnswer }}">
+      <template is="wxParse" data="{{ wxParseData: item.article.nodes }}" />
+    </view> -->
+  </view>
+</view>

@@ -1,0 +1,36 @@
+<view>
+  <view wx:for="{{ myTask }}" wx:key>
+    <view class="form_info">
+      <image class="form_pic" mode="aspectFill" src="{{ 'https://www.hzsimple.com' + item.image }}"></image>
+      <view class="word_info">
+        <view class="title_state_box">
+          <text class="title beyondEllipsis">【{{ item.orgshortname }}】{{ item.title }}</text>
+          <text class="state">进行中</text>
+        </view>
+        <view class="icon_box">
+          <text class="iconfont icon-map mapIcon"></text>
+          <text class="icon_name">{{ item.city }}</text>
+          <text class="iconfont icon-calendar calendarIcon"></text>
+          <text class="icon_name">{{ item.create_time }}</text>
+          <text class="iconfont icon-person2 personIcon"></text>
+          <text class="icon_name">{{ item.people_sum }}</text>
+        </view>
+      </view>
+    </view>
+    <view class="interact_box">
+      <view class="default_option" catchtap="chooseDefaultForm" data-idx="{{ index }}" data-id="{{ item.task_id }}">
+        <view>
+          <view class="choose_box" wx:if="{{ idx == index || item.isdefault == 1}}">
+            <image class="choose" src="/images/choose.png"></image>
+          </view>
+          <view class="hook_box" wx:else></view>
+        </view>
+        <text class="{{ item.isdefault == 1 ? 'default_name_active':'default_name' }}">{{ item.isdefault == 1 ? '当前任务':'设置为默认' }}</text>
+      </view>
+      <view class="del_check_btn">
+        <view class="del_btn" catchtap="delTaskClick" data-id="{{ item.task_id }}">删除</view>
+        <view class="check_btn" catchtap="checkFormDetail" data-id="{{ item.task_id }}">查看</view>
+      </view>
+    </view>
+  </view>
+</view>

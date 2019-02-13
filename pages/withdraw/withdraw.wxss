@@ -1,0 +1,254 @@
+page {
+  width: 100%;
+  background: rgb(246, 246, 246);
+}
+
+.bank_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+  padding: 20rpx 30rpx;
+  margin-top: 25rpx;
+}
+
+.base_info {
+  display: flex;
+  align-items: center;
+}
+
+.bank_pic {
+  width: 66rpx;
+  height: 66rpx;
+  border-radius: 50%;
+}
+
+.account {
+  display: flex;
+  flex-direction: column;
+  padding-left: 14rpx;
+}
+
+.bank_name {
+  font-size: 30rpx;
+  color: #0a0a0a;
+}
+
+.bank_num {
+  font-size: 30rpx;
+  color: #727272;
+}
+
+.arrowRightIcon {
+  font-size: 38rpx;
+  color: #535353;
+}
+
+.withdraw_box {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  margin-top: 25rpx;
+  padding: 0 30rpx;
+}
+
+.money {
+  font-size: 28rpx;
+  color: #727272;
+  padding: 36rpx 0;
+}
+
+.input_box {
+  width: 684rpx;
+  border-bottom: 1rpx solid #eeeeee;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10rpx;
+}
+
+.icon-rmb {
+  font-size: 60rpx;
+}
+
+.input_money {
+  width: 550rpx;
+  font-size: 50rpx;
+  padding-left: 10rpx;
+}
+
+.total_money {
+  display: flex;
+  align-items: center;
+  padding: 28rpx 0;
+}
+
+.left_money {
+  font-size: 24rpx;
+  color: #959595;
+}
+
+.withdraw_btn {
+  font-size: 24rpx;
+  color: #2dab13;
+  padding-left: 24rpx;
+}
+
+.confirmBtn {
+  width: 700rpx;
+  height: 90rpx;
+  border-radius: 5rpx;
+  background: #2dab13;
+  font-size: 32rpx;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 90rpx;
+  margin: 38rpx 25rpx;
+}
+
+.withdraw_record {
+  font-size: 32rpx;
+  color: #2dab13;
+  position: fixed;
+  bottom: 60rpx;
+  left: 50%;
+  margin-left: -60rpx;
+}
+
+/* 底部弹出框 */
+/*使屏幕变暗  */
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+/*对话框 */
+.commodity_attr_box {
+  height: 500rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+}
+
+.manage_card{
+  width: 670rpx;
+  /* height: 140rpx; */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30rpx 40rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.manage_btn {
+  color: #20a617;
+  font-size: 32rpx;
+}
+
+.bank_card_title {
+  display: flex;
+  flex-direction: column;
+}
+
+.card_tips_one {
+  font-size: 32rpx;
+  color: #000000;
+}
+
+.card_tips_two {
+  font-size: 24rpx;
+  color: #999999;
+  padding-top: 12rpx;
+}
+
+.bank_list {
+  width: 100%;
+  height: 350rpx;
+}
+
+.each_card {
+  height: 116rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 40rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.deleteIcon {
+  font-size: 38rpx;
+  padding-right: 30rpx;
+}
+
+.eac_bank_box {
+  display: flex;
+  align-items: center;
+}
+
+.bank_img {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  margin-right: 40rpx;
+}
+
+.each_bank_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.each_bank_name {
+  font-size: 30rpx;
+  color: #666666;
+}
+
+.max_time {
+  font-size: 20rpx;
+  color: #999999;
+}
+
+.choose_dot_box {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  border: 2rpx solid #20a617;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40rpx;
+}
+
+.sec {
+  border: 2rpx solid #949494;
+}
+
+.green_dot {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background: #20a617;
+}
+
+.new_card_box {
+  width: 100%;
+  height: 116rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.use_new_card {
+  font-size: 30rpx;
+  color: #666666;
+  padding-left: 130rpx;
+}

@@ -1,0 +1,22 @@
+<view class="page_box">
+  <block wx:if="{{ !phoneNum || changePhone }}">
+    <view class="input_box">
+      <input class="phoneInput" bindinput="inputPhoneNum" type="number" maxlength="11" placeholder="请输入新的手机号码"></input>
+    </view>
+    <view class="input_box">
+      <input class="codeInput" bindinput="inputCode" type="number" maxlength="6" placeholder="请输入短信验证"></input>
+      <text style="width:1rpx; height:32rpx; background:#a3a5a4;"></text>
+      <button class="get_code" disabled="{{disabled}}" bindtap="getVerificationCode">{{ time }}</button>
+    </view>
+    <view class="confirm_btn" catchtap="bindPhoneClick">提交</view>
+  </block>
+  <block wx:else>
+    <view class="phone_num">请输入 {{ phoneNum }} 收到的短信验证码</view>
+    <view class="input_box">
+      <input class="codeInput" bindinput="inputCode" type="number" maxlength="6" placeholder="请输入短信验证"></input>
+      <text style="width:1rpx; height:32rpx; background:#a3a5a4;"></text>
+      <button class="get_code" disabled="{{disabled}}" bindtap="getVerificationCode">{{ time }}</button>
+    </view>
+    <view class="confirm_btn next" catchtap="changeNewPhone">下一步</view>
+  </block>
+</view>

@@ -1,0 +1,191 @@
+page {
+  background: #f6f6f6;
+}
+
+.ercode_register_box {
+  padding: 30rpx 20rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.sub_title {
+  width: 180rpx;
+  font-size: 28rpx;
+  color: #000;
+}
+
+.ercode_box {
+  display: flex;
+  align-items: center;
+}
+
+.ercodeIcon, .arrowRightIcon {
+  font-size: 34rpx;
+  color: #828282;
+}
+
+.org_manager_title {
+  padding: 30rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.org_title, .manager_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circleIcon {
+  font-size: 46rpx;
+  color: #2dab13;
+}
+
+.org_title view:nth-child(2) {
+  font-size: 20rpx;
+  color: #2dab13;
+}
+
+.dash_line {
+  width: 266rpx;
+  height: 1rpx;
+  border-top: 1rpx dashed #b5b5b5;
+  margin: -28rpx -26rpx 0 -20rpx;
+}
+
+.circle2Icon {
+  font-size: 46rpx;
+  color: #7f7f7f;
+}
+
+.manager_title view:nth-child(2) {
+  font-size: 20rpx;
+  color: #7f7f7f;
+}
+
+.input_container {
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.single_input_box {
+  padding: 26rpx 20rpx;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cont_input {
+  margin-left: 40rpx;
+  width: 490rpx;
+  font-size: 28rpx;
+  color: #000;
+}
+
+.code_input {
+  margin-left: 40rpx;
+  width: 328rpx;
+  font-size: 28rpx;
+  color: #000;
+}
+
+.sendSMS {
+  width: 162rpx;
+  font-size: 28rpx;
+  color: #2dab13;
+  padding-left: 20rpx;
+  border-left: 1rpx solid #eee;
+  text-align: center;
+}
+
+.choose_area {
+  margin-left: 40rpx;
+  width: 450rpx;
+  font-size: 28rpx;
+  color: #c9c9c9;
+}
+
+.active {
+  color: #000;
+}
+
+.upload_img_box {
+  display: flex;
+  background: #fff;
+  position: relative;
+}
+
+.img_upload {
+  width: 374rpx;
+  margin: 20rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.choose_pic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.choose_pic text:first-child {
+  font-size: 50rpx;
+  color: #000;
+  padding-top: 25rpx;
+}
+
+.choose_pic text:nth-child(2) {
+  font-size: 28rpx;
+  color: #000;
+}
+
+.choose_pic text:nth-child(3) {
+  font-size: 20rpx;
+  color: #a0a0a0;
+  padding-bottom: 25rpx;
+}
+
+.logoImg{
+  width: 160rpx;
+  height: 160rpx;
+  position: relative;
+}
+
+.del_btn {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.next_step, .submit_btn {
+  width: 710rpx;
+  height: 88rpx;
+  border-radius: 5rpx;
+  background: #2dab13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  color: #fff;
+  margin: 70rpx 20rpx;
+}
+.form_btn{
+  position:absolute;
+  height:100%;
+  width:100%;
+  opacity:0;
+  z-index:1;
+  top:0;
+  left:0;
+}

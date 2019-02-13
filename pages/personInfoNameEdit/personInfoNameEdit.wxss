@@ -1,0 +1,34 @@
+page {
+  background: rgba(246, 246, 246, 1);
+}
+.page_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nameInput {
+  width: 660rpx;
+  padding: 16rpx 20rpx;
+  border-bottom: 2rpx solid #42b72a;
+  font-size: 28rpx;
+  color: #333;
+  margin-top: 20rpx;
+}
+.tips {
+  width: 700rpx;
+  font-size: 26rpx;
+  color: #999;
+  padding-top: 30rpx;
+}
+.confirm_btn {
+  width: 700rpx;
+  height: 80rpx;
+  border-radius: 5rpx;
+  background: #42b72a;
+  font-size: 32rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 90rpx;
+}

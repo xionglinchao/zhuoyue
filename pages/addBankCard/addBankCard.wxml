@@ -1,0 +1,51 @@
+<view>
+  <view class="tips">请绑定持卡人本人的银行卡</view>
+  <view class="card_info">
+    <view class="bank_info" catchtap="showModal">
+      <view style="font-size:32rpx;">请选择银行</view>
+      <view class="bank_box">
+        <text>{{ bankName }}</text>
+        <text class="iconfont icon-arrowRight arrowRightIcon"></text>
+      </view>
+    </view>
+    <view class="card_box">
+      <text class="title_words">持卡人</text>
+      <input class="user_name" bindinput="nameInput" placeholder="输入持卡人姓名" placeholder-class="cont_input"></input>
+    </view>
+    <view class="card_box">
+      <text class="title_words">卡号</text>
+      <input class="card_num" bindinput="cardNumberInput" type="number" placeholder="无需网银/免手续费" placeholder-class="cont_input"></input>
+    </view>
+  </view>
+  <view class="confirm_btn" catchtap="bindBankClick">确认</view>
+</view>
+
+<!-- 底部弹出框 -->
+<!-- 屏幕背景变暗的背景 -->
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<!--弹出框  -->
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+  <view class="bank_card_title">
+    <text class="card_tips_one">选择到账银行卡</text>
+    <text class="card_tips_two">请留意各银行到账时间</text>
+  </view>
+  <scroll-view scroll-y class="bank_list">
+    <view class="each_card" wx:for="{{ bankList }}" wx:key catchtap="chooseBankCardClick" data-idx="{{ index }}" data-item="{{ item }}">
+      <view class="eac_bank_box">
+        <image class="bank_img" mode="aspectFill" src="{{ 'https://www.hzsimple.com' + item.image }}"></image>
+        <view class="each_bank_info">
+          <text class="each_bank_name">{{ item.bank }}</text>
+          <text class="max_time">预计2小时内到账</text>
+        </view>
+      </view>
+      <block wx:if="{{ index == bankCardIdx }}">
+        <view class="choose_dot_box">
+          <text class="green_dot"></text>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="choose_dot_box sec"></view>
+      </block>
+    </view>
+  </scroll-view>
+</view>

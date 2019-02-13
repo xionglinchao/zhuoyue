@@ -1,0 +1,116 @@
+page {
+  width: 100%;
+}
+
+.progress_bar {
+  display: flex;
+  padding: 76rpx 0 76rpx 44rpx;
+}
+
+.left_part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.green_dot {
+  width: 22rpx;
+  height: 22rpx;
+  border-radius: 50rpx;
+  background: #2dab13;
+}
+
+.green_line {
+  width: 2rpx;
+  height: 100rpx;
+  border-left: 1rpx dashed #2dab13;
+}
+
+.clockIcon {
+  font-size: 70rpx;
+  color: #10acfe;
+}
+
+.grey_line {
+  width: 2rpx;
+  height: 100rpx;
+  border-left: 1rpx dashed #dcdcdc;
+}
+
+.grey_dot {
+  width: 22rpx;
+  height: 22rpx;
+  border-radius: 50rpx;
+  background: #dcdcdc;
+}
+
+.right_part {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 30rpx;
+}
+
+.step_one {
+  font-size: 32rpx;
+  color: #666666;
+}
+
+.step_two {
+  display: flex;
+  flex-direction: column;
+}
+
+.bank {
+  font-size: 34rpx;
+  color: #000000;
+}
+
+.time {
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.step_three {
+  font-size: 32rpx;
+  color: #959595;
+}
+
+.bottom_box {
+  display: flex;
+  flex-direction: column;
+  border-top: 1rpx solid #eeeeee;
+  margin: 0 30rpx;
+}
+
+.widthdraw_money, .bank_account  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36rpx 16rpx 8rpx 16rpx;
+}
+
+.widthdraw, .card {
+  font-size: 26rpx;
+  color: #7d7d7d;
+}
+
+.money, .account {
+  font-size: 26rpx;
+  color: #000000;
+}
+
+.confirm_btn {
+  width: 330rpx;
+  height: 70rpx;
+  border-radius: 5rpx;
+  background: #FFFFFF;
+  border: 1rpx solid #399d24;
+  font-size: 32rpx;
+  color: #2dab13;
+  text-align: center;
+  line-height: 70rpx;
+  position: absolute;
+  bottom: 105rpx;
+  left: 210rpx;
+}

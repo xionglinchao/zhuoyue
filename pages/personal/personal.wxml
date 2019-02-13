@@ -1,0 +1,126 @@
+<view class="page_box">
+  <view class="person_info">
+    <!-- 判断用户是否授权过 -->
+    <view class="edit_btn_box">
+      <view class="base_info" catchtap="toSetPersonalInfo_sec">
+        <image class="user_photo" src="{{ userInfo.image }}"></image>
+        <view class="name_phone">
+          <text class="user_name beyondEllipsis">{{ userInfo.nickname }}</text>
+          <view class="phone_number">推广码：{{ userInfo.uid ? userInfo.uid:'暂无' }}</view>
+        </view>
+      </view>
+      <view class="org_register" catchtap="toOrgRegister">
+        <view class="register_tips">
+          <text>我是推荐人</text>
+          <text>我帮机构注册</text>
+        </view>
+        <text class="iconfont icon-arrowRight arrowRightIcon"></text>
+      </view>
+    </view>
+  </view>
+  <!-- 所有机构 -->
+  <view>
+    <view class="organization_box">
+      <text class="all_organization">我推荐的机构</text>
+      <view class="check_all" catchtap="toAllOrganization">
+        <text class="icon_title">查看全部</text>
+        <text class="iconfont icon-arrowRight arrowRightIcon2"></text>
+      </view>
+    </view>
+    <view class="icon_list">
+      <view class="single_icon" catchtap="toAllOrganization_sec">
+        <view class="icon_box">
+          <text class="iconfont icon-organization organizationIcon"></text>
+          <text class="icon_num" wx:if="{{ allTasks.uesd_org > 0 }}">{{ allTasks.uesd_org > 99 ? '..':allTasks.uesd_org }}</text>
+        </view>
+        <text class="icon_name">有效机构</text>
+      </view>
+      <view class="single_icon" catchtap="toAllOrganization_third">
+        <view class="icon_box">
+          <text class="iconfont icon-audit checkingIcon"></text>
+          <text class="icon_num" wx:if="{{ allTasks.check_org > 0 }}">{{ allTasks.check_org > 99 ? '..':allTasks.check_org }}</text>
+        </view>
+        <text class="icon_name">审核中</text>
+      </view>
+      <view class="single_icon" catchtap="toAllOrganization_four">
+        <view class="icon_box">
+          <text class="iconfont icon-settlement organizationIcon"></text>
+          <text class="icon_num" wx:if="{{ allTasks.clear_org > 0 }}">{{ allTasks.clear_org > 99 ? '..':allTasks.clear_org }}</text>
+        </view>
+        <text class="icon_name">已结算</text>
+      </view>
+      <view class="single_icon" catchtap="toAllOrganization_five">
+        <view class="icon_box">
+          <text class="iconfont icon-refuse2 organizationIcon"></text>
+          <text class="icon_num" wx:if="{{ allTasks.refuse_org > 0 }}">{{ allTasks.refuse_org > 99 ? '..':allTasks.refuse_org }}</text>
+        </view>
+        <text class="icon_name">拒绝</text>
+      </view>
+    </view>
+  </view>
+  <!-- 所有任务 -->
+  <view>
+    <view class="organization_box" catchtap="toRegistrationForm">
+      <text class="all_organization">我领取的任务</text>
+      <view class="check_all">
+        <text class="icon_title">查看全部</text>
+        <text class="iconfont icon-arrowRight arrowRightIcon2"></text>
+      </view>
+    </view>
+    <view class="icon_list">
+      <view class="single_icon" catchtap="toRegistrationForm_sec">
+        <view class="icon_box">
+          <text class="iconfont icon-clock organizationIcon"></text>
+          <text class="icon_num" wx:if="{{ allTasks.uesd_task > 0 }}">{{ allTasks.uesd_task > 99 ? '..':allTasks.uesd_task }}</text>
+        </view>
+        <text class="icon_name">进行中</text>
+      </view>
+      <view class="single_icon" catchtap="toRegistrationForm_third">
+        <view class="icon_box">
+          <text class="iconfont icon-audit2 checkingIcon"></text>
+          <text class="icon_num" wx:if="{{ allTasks.check_task > 0 }}">{{ allTasks.check_task > 99 ? '..':allTasks.check_task }}</text>
+        </view>
+        <text class="icon_name">审核中</text>
+      </view>
+      <view class="single_icon" catchtap="toRegistrationForm_four">
+        <view class="icon_box">
+          <text class="iconfont icon-overdue organizationIcon"></text>
+          <text class="icon_num" wx:if="{{ allTasks.end_task > 0 }}">{{ allTasks.end_task > 99 ? '..':allTasks.end_task }}</text>
+        </view>
+        <text class="icon_name">已过期</text>
+      </view>
+      <view class="single_icon" catchtap="toRegistrationForm_five">
+        <view class="icon_box">
+          <text class="iconfont icon-refuse organizationIcon"></text>
+          <text class="icon_num" wx:if="{{ allTasks.refuse_task > 0 }}">{{ allTasks.refuse_task > 99 ? '..':allTasks.refuse_task }}</text>
+        </view>
+        <text class="icon_name">拒绝</text>
+      </view>
+    </view>
+  </view>
+  <!-- 收藏、推荐、帮助、反馈 -->
+  <view class="bottom_box">
+    <view class="all_organization">我的管理</view>
+    <view class="collect_fans">
+      <view class="collect_box" catchtap="toCollectList">
+        <image class="collectIcon" src="../../images/my/collect.png"></image>
+        <view class="icon_name">我的收藏</view>
+      </view>
+      <view class="collect_box" catchtap="toFansList">
+        <image class="collectIcon_second" src="../../images/my/fans.png"></image>
+        <view class="icon_name">我是推荐人</view>
+      </view>
+      <view class="collect_box" catchtap="toHelp">
+        <image class="collectIcon_third" src="../../images/my/help.png"></image>
+        <view class="icon_name">我要帮助</view>
+      </view>
+      <view class="collect_box" catchtap="toFeedback">
+        <image class="collectIcon_fourth" src="../../images/my/feedback.png"></image>
+        <view class="icon_name">一键反馈</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 底部导航栏组件引用 -->
+<nav tabIdx="4"></nav>

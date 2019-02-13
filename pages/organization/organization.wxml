@@ -1,0 +1,127 @@
+<view>
+  <view class="tab_box">
+    <text class="tab {{ index == tabIdx ? 'active':'' }}" catchtap="tabClick" data-tab-idx="{{ index }}" wx:for="{{ tab }}" wx:key>{{ item }}</text>
+  </view>
+  <view class="scroll_box">
+    <!-- 全部 -->
+    <block wx:if="{{ tabIdx == 0 }}">
+      <view wx:for="{{ contentlist }}" wx:key>
+        <view class="form_info">
+          <image class="form_pic" mode="aspectFill" src="{{ 'https://www.hzsimple.com' + item.logo }}"></image>
+          <view class="word_info">
+            <view class="title_state_box">
+              <text class="title beyondEllipsis">{{ item.orgname }}</text>
+              <block wx:if="{{ item.orgstatus == 0 }}">
+                <text class="state sec">审核中</text>
+              </block>
+              <block wx:elif="{{ item.orgstatus == 1 }}">
+                <block wx:if="{{ item.clestatus == 0 }}">
+                  <text class="state">未结算</text>
+                </block>
+                <block wx:elif="{{ item.clestatus == 1 }}">
+                  <text class="state">已结算</text>
+                </block>
+              </block>
+              <block wx:elif="{{ item.orgstatus == 2 }}">
+                <text class="state third">拒绝</text>
+              </block>
+              <block wx:elif="{{ item.orgstatus == 3 }}">
+                <text class="state third">禁用</text>
+              </block>
+            </view>
+            <view class="icon_box">
+              <text class="iconfont icon-map mapIcon"></text>
+              <text class="icon_name">{{ item.city }}</text>
+              <text class="iconfont icon-calendar calendarIcon"></text>
+              <text class="icon_name">{{ item.create_at }}</text>
+              <!-- <block wx:if="{{ item.orgstatus == 1 && item.clestatus == 1 }}">
+                <text class="iconfont icon-calendar calendarIcon"></text>
+                <text class="icon_name">{{ item.update_at }}</text>
+              </block> -->
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!-- 有效 -->
+    <block wx:elif="{{ tabIdx == 1 }}">
+      <view wx:for="{{ contentlist }}" wx:key>
+        <view class="form_info">
+          <image class="form_pic" mode="aspectFill" src="{{ 'https://www.hzsimple.com' + item.logo }}"></image>
+          <view class="word_info">
+            <view class="title_state_box">
+              <text class="title beyondEllipsis">{{ item.orgname }}</text>
+                <text class="state">已审核</text>
+            </view>
+            <view class="icon_box">
+              <text class="iconfont icon-map mapIcon"></text>
+              <text class="icon_name">{{ item.city }}</text>
+              <text class="iconfont icon-calendar calendarIcon"></text>
+              <text class="icon_name">{{ item.create_at }}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!-- 审核中 -->
+    <block wx:elif="{{ tabIdx == 2 }}">
+      <view wx:for="{{ contentlist }}" wx:key>
+        <view class="form_info">
+          <image class="form_pic" mode="aspectFill" src="{{ 'https://www.hzsimple.com' + item.logo }}"></image>
+          <view class="word_info">
+            <view class="title_state_box">
+              <text class="title beyondEllipsis">{{ item.orgname }}</text>
+              <text class="state sec">审核中</text>
+            </view>
+            <view class="icon_box">
+              <text class="iconfont icon-map mapIcon"></text>
+              <text class="icon_name">{{ item.city }}</text>
+              <text class="iconfont icon-calendar calendarIcon"></text>
+              <text class="icon_name">{{ item.create_at }}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!-- 结清 -->
+    <block wx:elif="{{ tabIdx == 3 }}">
+      <view wx:for="{{ contentlist }}" wx:key>
+        <view class="form_info">
+          <image class="form_pic" mode="aspectFill" src="{{ 'https://www.hzsimple.com' + item.logo }}"></image>
+          <view class="word_info">
+            <view class="title_state_box">
+              <text class="title beyondEllipsis">{{ item.orgname }}</text>
+              <text class="state third">已结算</text>
+            </view>
+            <view class="icon_box">
+              <text class="iconfont icon-map mapIcon"></text>
+              <text class="icon_name">{{ item.city }}</text>
+              <text class="iconfont icon-calendar calendarIcon"></text>
+              <text class="icon_name">{{ item.create_at }}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!-- 拒绝 -->
+    <block wx:elif="{{ tabIdx == 4 }}">
+      <view wx:for="{{ contentlist }}" wx:key>
+        <view class="form_info">
+          <image class="form_pic" mode="aspectFill" src="{{ 'https://www.hzsimple.com' + item.logo }}"></image>
+          <view class="word_info">
+            <view class="title_state_box">
+              <text class="title beyondEllipsis">{{ item.orgname }}</text>
+              <text class="state sec">拒绝</text>
+            </view>
+            <view class="icon_box">
+              <text class="iconfont icon-map mapIcon"></text>
+              <text class="icon_name">{{ item.city }}</text>
+              <text class="iconfont icon-calendar calendarIcon"></text>
+              <text class="icon_name">{{ item.create_at }}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

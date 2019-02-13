@@ -1,0 +1,8 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+<view>
+  <view class="title">{{ answer.title }}</view>
+  <view class="question_content">
+    <template is="wxParse" data="{{ wxParseData: article.nodes }}" />
+  </view>
+</view>

@@ -1,0 +1,30 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+<view class="page_box">
+  <view class="scroll_box">
+    <view class="pic_box">
+      <image class="form_pic" mode="aspectFill" src="{{ taskDetail.image }}"></image>
+    </view>
+    <view class="title">{{ taskDetail.title }}</view>
+    <view class="icon_box">
+      <text class="iconfont icon-map3 mapIcon"></text>
+      <text class="position">{{ taskDetail.city }}</text>
+      <text class="iconfont icon-calendar calendarIcon"></text>
+      <text class="date">{{ taskDetail.starttime }}</text>
+    </view>
+    <!-- 富文本 -->
+    <view class="content_box">
+      <template is="wxParse" data="{{ wxParseData:article.nodes }}" />
+    </view>
+  </view>
+  <!-- <view class="fixed_box">
+    <view class="people_num_box">
+      <view class="num_record">
+        <text class="iconfont icon-person2 personIcon"></text>
+        <text class="num">8</text>
+      </view>
+      <text class="num_title">已领取人数</text>
+    </view>
+    <view class="receive_click" catchtap="applyBtnClick">查看登记表</view>
+  </view> -->
+</view>

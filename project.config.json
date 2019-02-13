@@ -1,0 +1,97 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.1",
+	"appid": "wx818b3e2930ab2889",
+	"projectname": "zhuoyue",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 8,
+			"list": [
+				{
+					"id": -1,
+					"name": "修改昵称",
+					"pathName": "pages/personInfoNameEdit/personInfoNameEdit",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "修改手机号",
+					"pathName": "pages/personInfoPhoneEdit/personInfoPhoneEdit",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的收益",
+					"pathName": "pages/profit/profit",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "下级管理员",
+					"pathName": "pages/fansList/fansList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "收藏列表",
+					"pathName": "pages/collectList/collectList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "帮助",
+					"pathName": "pages/help/help",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "反馈",
+					"pathName": "pages/feedback/feedback",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "机构注册",
+					"pathName": "pages/orgRegister/orgRegister",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "二维码注册",
+					"pathName": "pages/ercodeRegister/ercodeRegister"
+				}
+			]
+		}
+	}
+}

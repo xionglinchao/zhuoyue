@@ -1,0 +1,8 @@
+<view class="page_box">
+  <image class="login_pic" src="../../images/login.png"></image>
+  <view class="bottom_box">
+    <view>一个会帮你赚钱的小程序</view>
+    <view>只为让您更安心</view>
+    <button class="authorization_btn" open-type="getUserInfo" bindgetuserinfo="getInfo">立即体验</button>
+  </view>
+</view>

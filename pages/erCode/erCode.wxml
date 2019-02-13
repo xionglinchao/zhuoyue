@@ -1,0 +1,41 @@
+<view class="scroll_part">
+  <view style="width:100%;height:10rpx;"></view>
+  <!-- 登记表 -->
+  <view class="form_box" catchtap="chooseFormClick">
+    <block wx:if="{{ defaultOption }}">
+      <view class="course_info">
+        <image class="course_pic" mode="aspectFill" src="{{ 'https://www.hzsimple.com' + defaultOption.image }}"></image>
+        <view class="base_info">
+          <text class="form_title beyondEllipsis">【{{ defaultOption.orgshortname }}】{{ defaultOption.title }}</text>
+          <view class="area_time_box">
+            <view class="area_box">
+              <text class="iconfont icon-map mapIcon"></text>
+              <text class="area_name">{{ defaultOption.city }}</text>
+            </view>
+            <view class="date_box">
+              <text class="iconfont icon-calendar calendarIcon"></text>
+              <text class="date">{{ defaultOption.create_time }}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="default">请设置默认登记表</view>
+    </block>
+    <text class="iconfont icon-arrowRight arrowRightIcon"></text>
+  </view>
+  <view class="color_line_box">
+    <image class="color_line" src="/images/registrationForm/line.png"></image>
+  </view>
+  <!-- 二维码 -->
+  <view class="erCode_box">
+    <image class="bg_pic" src="/images/er_code.png">
+      <image class="erCode" src="{{ erCode }}" data-src="{{ erCode }}" catchtap="previewImage"></image>
+      <text class="tip">提示：二维码为默认的任务信息,让客户自己扫一扫登记信息。</text>
+    </image>
+  </view>
+</view>
+
+<!-- 底部导航栏组件引用 -->
+<nav tabIdx = "2"></nav>

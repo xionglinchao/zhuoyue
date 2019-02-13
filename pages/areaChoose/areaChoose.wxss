@@ -1,0 +1,126 @@
+page {
+  width: 100%;
+}
+
+.fixed_part {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+}
+
+.search_box {
+  width: 590rpx;
+  height: 52rpx;
+  border-radius: 26rpx;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  margin: 20rpx 80rpx;
+}
+
+.searchIcon {
+  font-size: 28rpx;
+  color: #999;
+  padding-left: 16rpx;
+}
+
+.input_bar {
+  width: 500rpx;
+  font-size: 28rpx;
+  padding-left: 16rpx;
+}
+
+.scroll_part {
+  width: 100%;
+  padding-top: 92rpx;
+}
+
+.location {
+  font-size: 24rpx;
+  color: #999;
+  padding: 12rpx 0 12rpx 20rpx;
+  background: #eee;
+}
+
+.current_location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+}
+
+.city_box {
+  display: flex;
+  align-items: center;
+}
+
+.mapIcon {
+  font-size: 38rpx;
+  color: #42b72a;
+}
+
+.current_city {
+  font-size: 32rpx;
+  color: #000;
+  padding-left: 10rpx;
+}
+
+.county_box {
+  display: flex;
+  align-items: center;
+  padding-right: 30rpx;
+}
+
+.county {
+  font-size: 24rpx;
+  color: #666;
+  padding-right: 6rpx;
+}
+
+.arrowDownIcon {
+  font-size: 34rpx;
+  color: #666;
+}
+
+.choose_list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30rpx;
+}
+
+.single_area {
+  width: 206rpx;
+  height: 72rpx;
+  border-radius: 5rpx;
+  border: 1rpx solid #e5e5e5;
+  font-size: 30rpx;
+  color: #444;
+  text-align: center;
+  line-height: 72rpx;
+  margin: 28rpx 0 0 24rpx;
+}
+
+.detailed_place {
+  font-size: 28rpx;
+  color: #000;
+  padding: 24rpx 0 24rpx 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.letter_box {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 100rpx;
+  z-index: 20;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.letter {
+  font-size: 28rpx;
+  color: #42b72a;
+  padding: 0 20rpx 20rpx 0;
+}

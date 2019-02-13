@@ -1,0 +1,40 @@
+.page_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login_pic {
+  width: 750rpx;
+  height: 780rpx;
+}
+
+.bottom_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50rpx;
+}
+
+.bottom_box>view:first-child {
+  font-size: 42rpx;
+  color: #42b72a;
+}
+
+.bottom_box>view:nth-child(2) {
+  font-size: 24rpx;
+  color: #42b72a;
+  margin: 22rpx 0 52rpx 0;
+}
+
+.authorization_btn {
+  width: 340rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  background: #42b72a;
+  font-size: 34rpx;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

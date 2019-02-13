@@ -1,0 +1,98 @@
+<view>
+  <form report-submit='{{true}}' bindsubmit='submit'>
+    <view class="base_info">
+      <button form-type='submit' class="form_btn" catchtap="chooseImgClick"></button>
+      <text class="title">头像</text>
+      <view class="title_cont">
+        <image class="user_photo" mode="aspectFill" src="{{ userInfo.image }}"></image>
+        <text class="iconfont icon-arrowRight arrowRightIcon"></text>
+      </view>
+    </view>
+    <view class="base_info sec">
+      <button form-type='submit' class="form_btn" catchtap="editNickname"></button>
+      <text class="title">昵称</text>
+      <view class="title_cont">
+        <text class="title_words">{{ userInfo.nickname ? userInfo.nickname:'请填写' }}</text>
+        <text class="iconfont icon-arrowRight arrowRightIcon"></text>
+      </view>
+    </view>
+    <view class="base_info sec">
+      <button form-type='submit' class="form_btn" catchtap="editTruename"></button>
+      <text class="title">真实姓名</text>
+      <view class="title_cont">
+        <text class="title_words">{{ userInfo.truename ? userInfo.truename:'请填写' }}</text>
+        <text class="iconfont icon-arrowRight arrowRightIcon"></text>
+      </view>
+    </view>
+    <view class="base_info sec">
+      <button form-type='submit' class="form_btn" catchtap="editPhone"></button>
+      <text class="title">联系电话</text>
+      <view class="title_cont">
+        <text class="title_words">{{ userInfo.telephone ? userInfo.telephone:'请填写' }}</text>
+        <text class="iconfont icon-arrowRight arrowRightIcon"></text>
+      </view>
+    </view>
+    <view class="base_info sec">
+      <button form-type='submit' class="form_btn" catchtap="showGender"></button>
+      <text class="title">性别</text>
+      <view class="title_cont">
+        <text class="title_words">{{ userInfo.sex == 1 ? '男':'女'  }}</text>
+        <text class="iconfont icon-arrowRight arrowRightIcon"></text>
+      </view>
+    </view>
+    <picker mode="date" bindchange="chooseBirthDate">
+      <view class="base_info sec">
+        <text class="title">出生日期</text>
+        <view class="title_cont">
+          <text class="title_words">{{ userInfo.birthday ? userInfo.birthday:'请填写' }}</text>
+          <text class="iconfont icon-arrowRight arrowRightIcon"></text>
+        </view>
+      </view>
+    </picker>
+    <view class="base_info sec" wx:if="{{ extend.extend_name }}">
+      <text class="title">{{ extend.extend_name }}({{ extend.extend_uid }})于{{ extend.extend_time }}推荐我加入</text>
+    </view>
+  </form>
+</view>
+
+<!-- 性别选择弹窗 -->
+<view class="mysteriousGift_popup" hidden="{{ isGenderHide }}">
+  <view class="mystGift_bg" catchtap="hideGender"></view>
+  <view class="mystGift_box">
+    <text class="gender">性别</text>
+    <view class="male" catchtap="maleChooseClick">
+      <text class="man">男</text>
+      <block wx:if="{{ isMale == 1 }}">
+        <view class="choose_dot_box">
+          <text class="green_dot"></text>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="choose_dot_box grey"></view>
+      </block>
+    </view>
+    <view class="female" catchtap="femaleChooseClick">
+      <text class="woman">女</text>
+      <block wx:if="{{ isMale == 0 }}">
+        <view class="choose_dot_box">
+          <text class="green_dot"></text>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="choose_dot_box grey"></view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<!-- 昵称弹窗 -->
+<!-- <view class="mysteriousGift_popup" hidden="{{ isNameHide }}">
+  <view class="mystGift_bg" catchtap="hideNamePopup"></view>
+  <view class="namePopup_box">
+    <input class="nameInput" placeholder='设置名字'></input>
+    <view class="confirm_cancel_box">
+      <text>取消</text>
+      <text>确定</text>
+    </view>
+  </view>
+</view> -->

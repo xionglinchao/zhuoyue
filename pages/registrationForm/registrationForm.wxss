@@ -1,0 +1,188 @@
+page {
+  width: 100%;
+  background: rgb(246,246,246);
+}
+
+.page_box {
+  padding-bottom: 100rpx;
+}
+
+.form_box {
+  width: 726rpx;
+  height: 135rpx;
+  background: #FFFFFF;
+  margin: 0rpx 12rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.default {
+  font-size: 30rpx;
+  color: #333;
+  padding-left: 30rpx;
+}
+
+.course_info {
+  display: flex;
+}
+
+.course_pic {
+  width: 95rpx;
+  height: 95rpx;
+  border-radius: 5rpx;
+  margin: 0 12rpx;
+}
+
+.base_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 95rpx;
+}
+
+.form_title {
+  font-size: 28rpx;
+  max-width: 500rpx;
+}
+
+.area_time_box {
+  display: flex;
+  align-items: center;
+}
+
+.area_box, .date_box {
+  display: flex;
+  align-items: center;
+}
+
+.mapIcon {
+  font-size: 38rpx;
+  color: #42b72a;
+}
+
+.area_name, .date {
+  font-size: 20rpx;
+  color: #999999;
+  padding-left: 6rpx;
+}
+
+.calendarIcon {
+  font-size: 30rpx;
+  color: #1a1a1a;
+  padding-left: 40rpx;
+}
+
+.arrowRightIcon {
+  font-size: 32rpx;
+  color: #515151;
+  padding-right: 30rpx;
+}
+
+.color_line_box {
+  width: 100%;
+  height: 2rpx;
+}
+
+.color_line {
+  width: 726rpx;
+  height: 2rpx;
+  vertical-align: top;
+  margin-left: 12rpx;
+}
+
+/* 联系人信息 */
+.contact_info {
+  width: 730rpx;
+  background: #FFFFFF;
+  margin: 20rpx 10rpx 40rpx 10rpx;
+}
+
+.contact_person {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 18rpx;
+  /* border-bottom: 1rpx solid #eeeeee; */
+}
+
+.contact_title {
+  font-size: 28rpx;
+  margin-top: 24rpx;
+}
+
+.input_box {
+  width: 562rpx;
+  margin-top: 20rpx;
+}
+
+.input_bar {
+  width: 562rpx;
+  border-bottom: 1rpx solid #eeeeee;
+  font-size: 28rpx;
+}
+
+.name_tip {
+  font-size: 28rpx;
+  color: #c9c9c9;
+}
+
+.gender {
+  display: flex;
+  align-items: center;
+}
+
+.man, .woman {
+  width: 125rpx;
+  height: 50rpx;
+  border-radius: 5rpx;
+  border: 1rpx solid #c9c9c9;
+  font-size: 26rpx;
+  color: #444444;
+  text-align: center;
+  line-height: 50rpx;
+  margin: 15rpx 0;
+}
+
+.active {
+  background: #42b72a;
+  color: #FFFFFF;
+}
+
+.woman {
+  margin-left: 18rpx;
+}
+
+.contact_phone {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border-bottom: 1rpx solid #eeeeee; */
+  padding: 26rpx 0;
+  margin-left: 18rpx;
+}
+
+.phone {
+  font-size: 28rpx;
+}
+
+.sec {
+  border: none;
+}
+
+.submit_btn {
+  width: 700rpx;
+  height: 88rpx;
+  border-radius: 5rpx;
+  background: #42b72a;
+  font-size: 32rpx;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 88rpx;
+  margin: 0 25rpx;
+  border-width:0;
+  border-color: transparent;
+}
+.submit_btn::after {
+  border: none;
+}

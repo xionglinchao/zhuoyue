@@ -1,0 +1,65 @@
+<view class="page_box">
+  <form report-submit='{{true}}' bindsubmit='submit'>
+    <view class="top_select_box">
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+        <view class="icon_box">
+          <text class="iconfont icon-map2 map2Icon"></text>
+          <button form-type='submit' class="location">{{ region[1] }}{{ region[2] }}</button>
+          <text class="iconfont icon-dingwei dingweiIcon" catchtap="reLocation"></text>
+          <button form-type='submit' class="relocationBtn" catchtap="reLocationClick">重新定位</button>
+        </view>
+      </picker>
+      <button class="icon_box" catchtap="pull_down" form-type='submit'>
+        <text class="select">筛选</text>
+        <text class="iconfont icon-arrowDown arrowDownIcon"></text>
+      </button>
+    </view>
+    <!-- 搜索栏 -->
+    <view>
+      <block wx:if="{{ isInput }}">
+        <button form-type='submit' class="search_bar" catchtap="inputClick">
+          <text class="iconfont icon-search searchIcon"></text>
+          <text class="search_tip">输入登记表名称</text>
+        </button>
+      </block>
+      <block wx:else>
+        <input class="input_bar" bindconfirm="inputConfirm" focus="{{ !isInput }}" bindblur="loseFocus"></input>
+      </block>
+    </view>
+    <!-- 登记表 -->
+    <view class="registration_box">
+      <view class="registration_form" wx:for="{{ contentlist }}" wx:key catchtap="toFormDetail" data-item="{{ item }}">
+        <image class="form_pic" mode="aspectFill" src="{{ 'https://www.hzsimple.com' + item.image }}"></image>
+        <view class="taks_info_box">
+          <view class="form_title beyondEllipsis_two">【{{ item.orgshortname }}】{{ item.title }}</view>
+          <view class="price_box">
+            <text>￥{{ item.amt }}</text>
+            <text>/{{ item.amttype == 1 ? '个':'次' }}</text>
+          </view>
+          <view class="bottom_form_box">
+            <view class="area_box">
+              <text class="iconfont icon-map mapIcon"></text>
+              <text class="area_name">{{ item.city }}</text>
+            </view>
+            <view class="date_box">
+              <text class="iconfont icon-calendar calendarIcon"></text>
+              <text class="date">{{ item.endtime }}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </form>
+</view>
+
+<!-- 顶部下拉菜单 -->
+<view class='cover' hidden="{{flag}}" catchtap='pull_up'></view>
+<!--这是下拉框中的内容-->
+<view class="test3 {{ test=='test1'?'test1':'test2' }}" style='display:{{yesorno}};'>
+  <view class="options_list" wx:for="{{ options }}" wx:key catchtap="optionsClick" data-idx="{{ index }}">
+    <text class="{{ idx == index ? 'options_active':'options' }}">{{ item }}</text>
+    <text class="iconfont {{ idx == index ? 'icon-hook2':'' }} hook2Icon"></text>
+  </view>
+</view>
+<!-- 底部导航栏组件引用 -->
+<nav tabIdx="0"></nav>

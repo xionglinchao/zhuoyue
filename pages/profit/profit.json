@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "nav": "/templates/loadView/loadView"
+  }
+}

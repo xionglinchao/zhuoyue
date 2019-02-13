@@ -1,0 +1,152 @@
+page {
+  width: 100%;
+  background: rgb(246, 246, 246);
+}
+
+.form_info {
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  margin-top: 16rpx;
+  padding: 20rpx;
+  border-bottom: 2rpx solid #eeeeee;
+}
+
+.form_pic {
+  width: 95rpx;
+  height: 95rpx;
+  border-radius: 5rpx;
+}
+
+.word_info {
+  width: 600rpx;
+  height: 95rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-left: 16rpx;
+}
+
+.title_state_box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 28rpx;
+  max-width: 480rpx;
+}
+
+.state {
+  font-size: 24rpx;
+  color: #42b72a;
+}
+
+.icon_box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.mapIcon {
+  font-size: 34rpx;
+  color: #42b72a;
+}
+
+.icon_name {
+  font-size: 20rpx;
+  color: #999999;
+  padding-left: 12rpx;
+}
+
+.calendarIcon {
+  font-size: 28rpx;
+  color: #1a1a1a;
+  padding-left: 40rpx;
+}
+
+.personIcon {
+  font-size: 24rpx;
+  color: #1a1a1a;
+  padding-left: 40rpx;
+}
+
+.interact_box {
+  width: 100%;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20rpx 0;
+}
+
+.default_option {
+  width: 375rpx;
+  display: flex;
+  align-items: center;
+}
+
+.hook_box {
+  width: 37rpx;
+  height: 37rpx;
+  border-radius: 50%;
+  border: 2rpx solid #b5b5b5;
+  margin-left: 20rpx;
+}
+
+.choose_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choose {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  vertical-align: top;
+  margin-left: 20rpx;
+}
+
+.default_name {
+  font-size: 28rpx;
+  margin-left: 10rpx;
+}
+
+.default_name_active {
+  font-size: 28rpx;
+  margin-left: 10rpx;
+  color: #42b72a;
+}
+
+.del_check_btn {
+  width: 375rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.del_btn {
+  width: 122rpx;
+  height: 50rpx;
+  border-radius: 5rpx;
+  border: 1rpx solid #d2d2d2;
+  font-size: 24rpx;
+  color: #666666;
+  text-align: center;
+  line-height: 50rpx;
+  margin-right: 20rpx;
+}
+
+.check_btn {
+  width: 122rpx;
+  height: 50rpx;
+  border-radius: 5rpx;
+  border: 1rpx solid #42b72a;
+  font-size: 24rpx;
+  color: #42b72a;
+  text-align: center;
+  line-height: 50rpx;
+  margin-right: 20rpx;
+}

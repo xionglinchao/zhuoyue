@@ -1,0 +1,216 @@
+<view>
+  <view class="tab_box">
+    <text class="tab {{ index == tabIdx ? 'active':'' }}" catchtap="tabClick" data-tab-idx="{{ index }}" wx:for="{{ tab }}" wx:key>{{ item }}</text>
+  </view>
+  <view class="scroll_box">
+    <!-- 全部 -->
+    <block wx:if="{{ tabIdx == 0 }}">
+      <view wx:for="{{ contentlist }}" wx:key>
+        <view class="form_info">
+          <image class="form_pic" mode="aspectFill" src="{{ 'https://www.hzsimple.com' + item.image }}"></image>
+          <view class="word_info">
+            <view class="title_state_box">
+              <text class="title beyondEllipsis">【{{ item.orgshortname }}】{{ item.title }}</text>
+              <block wx:if="{{ item.status == 1 }}">
+                <block wx:if="{{ item.taskstatus == 0 }}">
+                  <text class="state sec">审核中</text>
+                </block>
+                <block wx:elif="{{ item.taskstatus == 1 }}">
+                  <text class="state">进行中</text>
+                </block>
+                <block wx:else>
+                  <text class="state sec">拒绝</text>
+                </block>
+              </block>
+              <block wx:elif="{{ item.status == 2 }}">
+                <text class="state third">已截止</text>
+              </block>
+            </view>
+            <view class="icon_box">
+              <text class="iconfont icon-map mapIcon"></text>
+              <text class="icon_name">{{ item.city }}</text>
+              <text class="iconfont icon-calendar calendarIcon"></text>
+              <text class="icon_name">{{ item.endtime }}</text>
+              <text class="iconfont icon-person2 personIcon"></text>
+              <text class="icon_name">{{ item.people_sum }}</text>
+            </view>
+          </view>
+        </view>
+        <view class="interact_box">
+          <view class="default_option" wx:if="{{ item.taskstatus == 1 && item.status != 2 }}" catchtap="chooseDefaultForm" data-idx="{{ index }}" data-item="{{ item }}">
+            <view>
+              <view class="choose_box" wx:if="{{ idx == index || item.isdefault == 1 }}">
+                <image class="choose" src="/images/choose.png"></image>
+              </view>
+              <view class="hook_box" wx:else></view>
+            </view>
+            <!-- <text class="default_name">设置为默认</text> -->
+            <text class="{{ item.isdefault == 1 ? 'default_name_active':'default_name' }}">{{ item.isdefault == 1 ? '当前任务':'设置为默认' }}</text>
+          </view>
+          <view wx:else></view>
+          <view class="del_check_btn">
+            <view class="del_btn" catchtap="delTaskClick" data-id="{{ item.taskid }}">删除</view>
+            <view class="check_btn" catchtap="checkTaskDetail" data-item="{{ item }}">查看</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!-- 进行中 -->
+    <block wx:elif="{{ tabIdx == 1 }}">
+      <view wx:for="{{ contentlist }}" wx:key>
+        <view class="form_info">
+          <image class="form_pic" mode="aspectFill" src="{{ 'https://www.hzsimple.com' + item.image }}"></image>
+          <view class="word_info">
+            <view class="title_state_box">
+              <text class="title beyondEllipsis">【{{ item.orgshortname }}】{{ item.title }}</text>
+              <text class="state">进行中</text>
+            </view>
+            <view class="icon_box">
+              <text class="iconfont icon-map mapIcon"></text>
+              <text class="icon_name">{{ item.city }}</text>
+              <text class="iconfont icon-calendar calendarIcon"></text>
+              <text class="icon_name">{{ item.endtime }}</text>
+              <text class="iconfont icon-person2 personIcon"></text>
+              <text class="icon_name">{{ item.people_sum }}</text>
+            </view>
+          </view>
+        </view>
+        <!-- 领取的机构信息 -->
+        <view class="get_org_info">
+          <view class="get_org_price">
+            <view>￥{{ item.amt }}</view>
+            <view>/个</view>
+          </view>
+          <view class="get_org_userInfo">
+            <view class="get_org_name">
+              <view>联系人：</view>
+              <view class="beyondEllipsis">{{ item.linkman }}</view>
+            </view>
+            <view class="get_org_phone">
+              <view>联系电话：</view>
+              <view>{{ item.linkphone }}</view>
+            </view>
+          </view>
+        </view>
+        <view class="interact_box">
+          <view class="default_option" catchtap="chooseDefaultForm" data-idx="{{ index }}" data-item="{{ item }}">
+            <view>
+              <view class="choose_box" wx:if="{{ idx == index || item.isdefault == 1 }}">
+                <image class="choose" src="/images/choose.png"></image>
+              </view>
+              <view class="hook_box" wx:else></view>
+            </view>
+            <text class="{{ item.isdefault == 1 ? 'default_name_active':'default_name' }}">{{ item.isdefault == 1 ? '当前任务':'设置为默认' }}</text>
+          </view>
+          <view class="del_check_btn">
+            <view class="del_btn" catchtap="delTaskClick" data-item="{{ item }}">删除</view>
+            <view class="check_btn" catchtap="checkTaskDetail" data-item="{{ item }}">查看</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!-- 审核中 -->
+    <block wx:elif="{{ tabIdx == 2 }}">
+      <view wx:for="{{ contentlist }}" wx:key>
+        <view class="form_info">
+          <image class="form_pic" mode="aspectFill" src="{{ 'https://www.hzsimple.com' + item.image }}"></image>
+          <view class="word_info">
+            <view class="title_state_box">
+              <text class="title beyondEllipsis">【{{ item.orgshortname }}】{{ item.title }}</text>
+              <text class="state sec">审核中</text>
+            </view>
+            <view class="icon_box">
+              <text class="iconfont icon-map mapIcon"></text>
+              <text class="icon_name">{{ item.city }}</text>
+              <text class="iconfont icon-calendar calendarIcon"></text>
+              <text class="icon_name">{{ item.endtime }}</text>
+              <text class="iconfont icon-person2 personIcon"></text>
+              <text class="icon_name">{{ item.people_sum }}</text>
+            </view>
+          </view>
+        </view>
+        <view class="interact_box">
+          <view class="price_box">
+            <text>￥12.00</text>
+            <text>/个</text>
+          </view>
+          <view class="del_check_btn">
+            <view class="del_btn" catchtap="delTaskClick" data-item="{{ item }}">删除</view>
+            <view class="check_btn" catchtap="checkTaskDetail" data-item="{{ item }}">查看</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!-- 已过期 -->
+    <block wx:elif="{{ tabIdx == 3 }}">
+      <view wx:for="{{ contentlist }}" wx:key>
+        <view class="form_info">
+          <image class="form_pic" mode="aspectFill" src="{{ 'https://www.hzsimple.com' + item.image }}"></image>
+          <view class="word_info">
+            <view class="title_state_box">
+              <text class="title beyondEllipsis">【{{ item.orgshortname }}】{{ item.title }}</text>
+              <text class="state third">已截止</text>
+            </view>
+            <view class="icon_box">
+              <text class="iconfont icon-map mapIcon"></text>
+              <text class="icon_name">{{ item.city }}</text>
+              <text class="iconfont icon-calendar calendarIcon"></text>
+              <text class="icon_name">{{ item.endtime }}</text>
+              <text class="iconfont icon-person2 personIcon"></text>
+              <text class="icon_name">{{ item.people_sum }}</text>
+            </view>
+          </view>
+        </view>
+        <view class="interact_box">
+          <view></view>
+          <view class="del_check_btn">
+            <view class="del_btn" catchtap="delTaskClick" data-item="{{ item }}">删除</view>
+            <view class="check_btn" catchtap="checkTaskDetail" data-item="{{ item }}">查看</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!-- 拒绝 -->
+    <block wx:elif="{{ tabIdx == 4 }}">
+      <view wx:for="{{ contentlist }}" wx:key>
+        <view class="form_info">
+          <image class="form_pic" mode="aspectFill" src="{{ 'https://www.hzsimple.com' + item.image }}"></image>
+          <view class="word_info">
+            <view class="title_state_box">
+              <text class="title beyondEllipsis">【{{ item.orgshortname }}】{{ item.title }}</text>
+              <text class="state sec">拒绝</text>
+            </view>
+            <view class="icon_box">
+              <text class="iconfont icon-map mapIcon"></text>
+              <text class="icon_name">{{ item.city }}</text>
+              <text class="iconfont icon-calendar calendarIcon"></text>
+              <text class="icon_name">{{ item.endtime }}</text>
+              <text class="iconfont icon-person2 personIcon"></text>
+              <text class="icon_name">{{ item.people_sum }}</text>
+            </view>
+          </view>
+        </view>
+        <view class="interact_box">
+          <view></view>
+          <view class="del_check_btn">
+            <view class="del_btn" catchtap="delTaskClick" data-item="{{ item }}">删除</view>
+            <view class="check_btn" catchtap="checkTaskDetail" data-item="{{ item }}">查看</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<!-- 删除弹窗 -->
+<view class="mysteriousGift_popup" hidden="{{ delPopup }}">
+  <view class="mystGift_bg" catchtap="hideDelPopup"></view>
+  <view class="mystGift_box">
+    <view class="delPopup_title">删除任务</view>
+    <view class="delPopup_tips">确定删除该任务？</view>
+    <view class="delPopup_btn">
+      <text catchtap="hideDelPopup">取消</text>
+      <text catchtap="delClick">确定</text>
+    </view>
+  </view>
+</view>

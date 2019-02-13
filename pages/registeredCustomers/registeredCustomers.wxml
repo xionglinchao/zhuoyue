@@ -1,0 +1,38 @@
+<view>
+  <view class="time_box">
+    <picker mode="date" bindchange="chooseStartDate">
+      <view class="star_time_box">
+        <text class="iconfont icon-starTime starTimeIcon"></text>
+        <text class="star_date">{{ startDate ? startDate:LDate }}</text>
+      </view>
+    </picker>
+    <view style="width:1rpx; height:25rpx; background: #e5e5e5;"></view>
+    <picker mode="date" bindchange="chooseEndDate">
+      <view class="end_time_box">
+        <text class="iconfont icon-endTime senTimeIcon"></text>
+        <text class="end_date">{{ endDate ? endDate:nowDate }}</text>
+      </view>
+    </picker>
+  </view>
+  <view class="register_list">
+    <view class="customer_info" wx:for="{{ contentlist }}" wx:key>
+      <view class="name_phone">
+        <text class="customer_name beyondEllipsis">{{ item.name }}</text>
+        <text class="phone_num">{{ item.telephone }}</text>
+      </view>
+      <view class="time_place_observe">
+        <view class="time_place">
+          <view class="time">
+            <text class="iconfont icon-calendar calendarIcon"></text>
+            <text class="time_record">{{ item.create_at }}</text>
+          </view>
+          <view class="place">
+            <text class="iconfont icon-organization organizationIcon"></text>
+            <text class="place_name beyondEllipsis">{{ item.title }}</text>
+          </view>
+        </view>
+        <!-- <text class="iconfont icon-observe observeIcon"></text> -->
+      </view>
+    </view>
+  </view>
+</view>

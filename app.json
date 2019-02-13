@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/homePage/homePage",
+    "pages/helpAnswer/helpAnswer",
+    "pages/orgRegister/orgRegister",
+    "pages/ercodeRegister/ercodeRegister",
+    "pages/help/help",
+    "pages/feedback/feedback",
+    "pages/fansList/fansList",
+    "pages/collectList/collectList",
+    "pages/taskInvite/taskInvite",
+    "pages/withdrawRecord/withdrawRecord",
+    "pages/login/login",
+    "pages/personal/personal",
+    "pages/profit/profit",
+    "pages/erCode/erCode",
+    "pages/withdraw/withdraw",
+    "pages/registrationForm/registrationForm",
+    "pages/areaChoose/areaChoose",
+    "pages/registeredCustomers/registeredCustomers",
+    "pages/addBankCard/addBankCard",
+    "pages/withdrawProcess/withdrawProcess",
+    "pages/formDetail/formDetail",
+    "pages/personInfo/personInfo",
+    "pages/personInfoNameEdit/personInfoNameEdit",
+    "pages/personInfoPhoneEdit/personInfoPhoneEdit",
+    "pages/profitDetail/profitDetail",
+    "pages/organization/organization",
+    "pages/formList/formList",
+    "pages/chooseFormList/chooseFormList"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#42b72a",
+    "navigationBarTitleText": "嗖客在线",
+    "navigationBarTextStyle": "white"
+  }
+}

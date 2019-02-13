@@ -1,0 +1,36 @@
+<view>
+  <block wx:for="{{ contentlist }}" wx:key>
+    <view class="single_list" data-item="{{ item }}" bindtouchstart="mytouchstart" bindtouchend="mytouchend" bindtap="deleteTask">
+      <image class="task_pic" mode="aspectFill" src="{{ 'https://www.hzsimple.com' + item.image }}"></image>
+      <view class="task_info">
+        <view class="task_title beyondEllipsis">【{{ item.orgname }}】{{ item.title }}</view>
+        <view class="price_address_date">
+          <view class="price">
+            <text>￥{{ item.amt }}</text>
+            <text>/个</text>
+          </view>
+          <view class="address">
+            <text class="iconfont icon-map3"></text>
+            <text>{{ item.city }}</text>
+          </view>
+          <view class="date">
+            <text class="iconfont icon-calendar"></text>
+            <text>{{ item.endtime }}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- 长按删除弹窗 -->
+  <view class="mysteriousGift_popup" hidden="{{ delPopup }}">
+    <view class="mystGift_bg" catchtap="hideDelPopup"></view>
+    <view class="mystGift_box">
+      <view class="delPopup_title">删除收藏</view>
+      <view class="delPopup_tips">确定删除该收藏？</view>
+      <view class="delPopup_btn">
+        <text catchtap="hideDelPopup">取消</text>
+        <text catchtap="delClick">确定</text>
+      </view>
+    </view>
+  </view>
+</view>

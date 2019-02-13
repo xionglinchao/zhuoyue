@@ -1,0 +1,5 @@
+<view class="page_box">
+  <input class="nameInput" bindinput="editNewName" placeholder="{{ nameType == 1 ? '昵称姓名':'真实姓名' }}" placeholder-style="color:#666;"></input>
+  <view class="tips">{{ nameType == 1 ? '好昵称可以更让人注意你':'请填写您的真实姓名' }}</view>
+  <view class="confirm_btn" catchtap="confirmBtnClick">确认修改</view>
+</view>

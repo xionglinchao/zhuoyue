@@ -1,0 +1,90 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+<view class="page_box">
+  <view class="scroll_box">
+    <view class="pic_box">
+      <image class="form_pic" mode="aspectFill" src="{{ taskDetail.image }}"></image>
+    </view>
+    <view class="title_price_box">
+      <view class="title beyondEllipsis_two">{{ taskDetail.title }}</view>
+      <view class="price_box">
+        <text>￥{{ taskDetail.amt }}</text>
+        <text>/个</text>
+      </view>
+    </view>
+    <view class="icon_box">
+      <text class="iconfont icon-map3 mapIcon"></text>
+      <text class="position">{{ taskDetail.city }}</text>
+      <text class="iconfont icon-calendar calendarIcon"></text>
+      <text class="date">{{ taskDetail.starttime }}</text>
+    </view>
+    <view class="content_box">
+      <template is="wxParse" data="{{ wxParseData:article.nodes }}" />
+    </view>
+    <view style="width:100%;height:10rpx;background:#eeeeee;"></view>
+    <!-- 机构信息 -->
+    <view class="org_base_info">
+      <image class="org_pic" src="{{ taskDetail.logo }}"></image>
+      <view class="org_title_address">
+        <view class="beyondEllipsis">{{ taskDetail.orgname }}</view>
+        <view class="beyondEllipsis">{{ taskDetail.addr }}</view>
+      </view>
+    </view>
+    <!-- 更多内容 -->
+    <view class="more_cont" wx:if="{{ moreTasks.length > 0 }}">
+      <text class="sec_title">为你推荐</text>
+      <view class="more_pic_box">
+        <block wx:for="{{ moreTasks }}" wx:key>
+          <view class="other_tasks">
+            <image class="cont_pic" mode="aspectFill" src="{{ 'https://www.hzsimple.com' + item.image }}" catchtap="toTaskDetail" data-item="{{ item }}"></image>
+            <view class="cont_title beyondEllipsis">{{ item.title }}</view>
+            <view class="cont_price">
+              <text>￥{{ item.amt }}</text>
+              <text>/个</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="fixed_box">
+    <view class="people_num_box">
+      <view class="num_record">
+        <text class="iconfont icon-person2 personIcon"></text>
+        <text class="num" wx:if="{{ count > 0 }}">{{ count > 99 ? '..':count }}</text>
+      </view>
+      <text class="num_title">已领取人数</text>
+    </view>
+    <view class="check_form" catchtap="likeBtnClick" data-id="{{ taskDetail.id }}">{{ taskDetail.support ? '已收藏':'收藏' }}</view>
+    <block wx:if="{{ taskDetail.is_get }}">
+      <view class="receive_click">已领取</view>
+    </block>
+    <block wx:else>
+      <view class="receive_click" catchtap="showGetPopup">立即领取</view>
+    </block>
+  </view>
+</view>
+
+<!-- 领取提示弹窗 -->
+<view class="get_tips_popup" hidden="{{ getPopup }}">
+  <view class="get_tips_bg" catchtap="hideGetPopup"></view>
+  <view class="get_tips_box">
+    <view class="delPopup_title">提示</view>
+    <view class="delPopup_tips">是否确认领取？</view>
+    <view class="delPopup_btn">
+      <text catchtap="hideGetPopup">取消</text>
+      <text catchtap="applyBtnClick">确定</text>
+    </view>
+  </view>
+</view>
+
+<!-- 申请成功弹窗 -->
+<view class="mysteriousGift_popup" hidden="{{ isApply }}">
+  <view class="mystGift_bg" catchtap="hideApplySuccess"></view>
+  <view class="mystGift_box">
+    <image class="correct_pic" src="/images/correct.png"></image>
+    <view class="apply_success">申请成功</view>
+    <view class="tips">您已申请成功，请耐心等待后台审核</view>
+    <view class="confirm_btn" catchtap="hideApplySuccess">确认</view>
+  </view>
+</view>

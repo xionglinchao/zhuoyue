@@ -1,0 +1,6 @@
+<view class="tab_list">
+  <view class="tab_box" catchtap="toast" data-num="{{ index }}" wx:for="{{ bottomList }}" wx:key>
+    <image src="{{ tabIdx == index ? item.icon1:item.icon }}"></image>
+    <text class="icon_title {{ tabIdx == index ? 'active':'' }}">{{ item.text }}</text>
+  </view>
+</view>

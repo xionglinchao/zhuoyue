@@ -1,0 +1,41 @@
+<view class="page_box">
+  <view class="profit_box">
+    <view class="my_profit">我的收益</view>
+    <view class="yesterday_profit">
+      <text class="profit_head">可用余额(元)</text>
+      <text class="left_money">{{ profit.curramt }}</text>
+      <text class="yestoday_profit">昨日收益{{ profit.yestoday_sum }}元</text>
+    </view>
+    <view class="bottom_record_box">
+      <view class="total_profit">
+        <text class="title">累计收益(元)</text>
+        <text class="number">{{ profit.all_sum }}</text>
+      </view>
+      <view class="total_people" catchtap="checkTotalPeople">
+        <text class="title">累计登记(人)</text>
+        <text class="number">{{ profit.all_cust }}</text>
+      </view>
+      <view class="promotion_agency" catchtap="toOrganization">
+        <text class="title">推广机构</text>
+        <text class="number">{{ profit.all_org }}</text>
+      </view>
+    </view>
+  </view>
+  <view class="withdrawal" catchtap="withdrawalBtnClick" data-money="{{ profit.curramt }}">
+    <view class="withdrawal_title">
+      <text class="iconfont icon-withdrawal withdrawalIcon"></text>
+      <text class="sec_title">资金提现</text>
+    </view>
+    <text class="iconfont icon-arrowRight arrowRightIcon"></text>
+  </view>
+  <view class="profit_detail" catchtap="checkProfitDetail">
+    <view class="detail_title">
+      <text class="iconfont icon-money moneyIcon"></text>
+      <text class="sec_title">明细</text>
+    </view>
+    <text class="iconfont icon-arrowRight arrowRightIcon"></text>
+  </view>
+</view>
+
+<!-- 底部导航栏组件引用 -->
+<nav tabIdx = "3"></nav>

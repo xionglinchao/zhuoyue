@@ -1,0 +1,27 @@
+<view>
+  <view class="feedback_title">请选择您的反馈问题类型（必选）</view>
+  <view class="feedback_box">
+    <!-- 反馈类型 -->
+    <view class="feedback_type">
+      <block wx:for="{{ feedbackList }}" wx:key>
+        <view class="each_type {{ idx == index ? 'active':'' }}" catchtap="chooseFeedbackType" data-id="{{ item.id }}" data-idx="{{ index }}">{{ item.name }}</view>
+      </block>
+    </view>
+    <!-- 反馈内容 -->
+    <view class="text_box">
+      <textarea class="feedback_cont" bindinput="contentInput" maxlength="400" placeholder="说点什么吧" placeholder-class="tips"></textarea>
+      <view class="input_num">{{ inputNum ? inputNum:'0' }}/400</view>
+    </view>
+    <!-- 上传图片 -->
+    <view class="picture_box">
+      <view class="add_picture" catchtap="btn_image" wx:if="{{ pics.length < 9 }}">
+        <text class="iconfont icon-camera cameraIcon"></text>
+        <text class="pic_num">最多上传9张</text>
+      </view>
+      <image wx:for="{{pics}}" wx:key src="{{item}}" class="tempPhoto" catchtap="picturePreview" data-item="{{ item }}">
+        <image class="del_img" src='/images/d.png' catchtap='btn_delete' data-index='{{ index }}'></image>
+      </image>
+    </view>
+  </view>
+  <view class="submit_btn" catchtap="feedbackBtnClick">提交</view>
+</view>

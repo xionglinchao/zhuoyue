@@ -1,0 +1,222 @@
+page {
+  width: 100%;
+  background: rgb(246, 246, 246);
+}
+
+.page_box {
+  padding-bottom: 100rpx;
+}
+
+.person_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #42b72a;
+  padding: 50rpx 30rpx 35rpx 20rpx;
+}
+
+.edit_btn_box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  line-height: normal;
+}
+
+.edit_btn_box::after {
+  border: none;
+}
+
+.base_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.user_photo {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+}
+
+.name_phone {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20rpx;
+}
+
+.user_name {
+  font-size: 36rpx;
+  color: #fff;
+  max-width: 350rpx;
+}
+
+.phoneIcon {
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.phone_number {
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.org_register {
+  width: 186rpx;
+  height: 66rpx;
+  border-radius: 32rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register_tips {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.register_tips text:first-child {
+  font-size: 18rpx;
+  color: #42b72a;
+}
+
+.register_tips text:nth-child(2) {
+  font-size: 22rpx;
+  color: #42b72a;
+}
+
+.arrowRightIcon {
+  font-size: 22rpx;
+  color: #42b72a;
+  padding-left: 6rpx;
+}
+
+.organization_box {
+  width: 100%;
+  padding: 35rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-top: 1rpx solid #eee;
+}
+
+.all_organization {
+  font-size: 32rpx;
+  color: #1b1b1b;
+  padding-left: 30rpx;
+  font-weight: bold;
+}
+
+.check_all {
+  display: flex;
+  align-items: center;
+}
+
+.icon_title {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.arrowRightIcon2 {
+  font-size: 32rpx;
+  color: #535353;
+  padding: 0 30rpx 0 6rpx;
+}
+
+.icon_list {
+  display: flex;
+  background: #fff;
+}
+
+.single_icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250rpx;
+  padding: 35rpx 0;
+}
+
+.icon_box {
+  position: relative;
+}
+
+.organizationIcon, .checkingIcon {
+  font-size: 48rpx;
+  color: #42b72a;
+}
+
+.icon_num {
+  position: absolute;
+  z-index: 2;
+  top: -14rpx;
+  right: -10rpx;
+  width: 25rpx;
+  height: 25rpx;
+  border-radius: 50%;
+  border: 2rpx solid #42b72a;
+  font-size: 16rpx;
+  color: #42b72a;
+  text-align: center;
+  line-height: 25rpx;
+  background: #fff;
+}
+
+.icon_name {
+  font-size: 28rpx;
+  color: #999;
+  padding-top: 10rpx;
+}
+
+/* 底部收藏及下级按钮 */
+.bottom_box {
+  background: #fff;
+  border-top: 1rpx solid #eee;
+  padding-top: 30rpx;
+}
+
+.collect_fans {
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collect_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 45rpx 0;
+}
+
+.collectIcon {
+  width: 54rpx;
+  height: 50rpx;
+}
+
+.collectIcon_second {
+  width: 58rpx;
+  height: 52rpx;
+}
+
+.collectIcon_third {
+  width: 52rpx;
+  height: 52rpx;
+}
+
+.collectIcon_fourth{
+  width: 55rpx;
+  height: 53rpx;
+}
+
+.icon_name {
+  font-size: 22rpx;
+  color: #666;
+  padding-top: 16rpx;
+}

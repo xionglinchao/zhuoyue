@@ -1,0 +1,44 @@
+<view>
+  <view class="progress_bar">
+    <view class="left_part">
+      <text class="green_dot"></text>
+      <text class="green_line"></text>
+      <text class="iconfont icon-clock clockIcon"></text>
+      <block wx:if="{{ processDetail.status == 1 || processDetail.status == 2 }}">
+        <text class="green_line"></text>
+        <text class="green_dot"></text>
+      </block>
+      <block wx:else>
+        <text class="grey_line"></text>
+        <text class="grey_dot"></text>
+      </block>
+    </view>
+    <view class="right_part">
+      <text class="step_one">发起提现申请</text>
+      <view class="step_two">
+        <text class="bank">银行处理中</text>
+        <text class="time">预计{{ processDetail.mayarritime }}到账</text>
+      </view>
+      <block wx:if="{{ processDetail.status == 1 }}">
+        <text class="step_three" style="color:#2dab13;">到账成功</text>
+      </block>
+      <block wx:elif="{{ processDetail.status == 2 }}">
+        <text class="step_three" style="color:red;">提现失败</text>
+      </block>
+      <block wx:else>
+        <text class="step_three">到账成功</text>
+      </block>
+    </view>
+  </view>
+  <view class="bottom_box">
+    <view class="widthdraw_money">
+      <text class="widthdraw">提现金额</text>
+      <text class="money">￥{{ processDetail.amt }}</text>
+    </view>
+    <view class="bank_account">
+      <text class="card">到账银行卡</text>
+      <text class="account">{{ processDetail.bankname }} 尾号{{ processDetail.count }}</text>
+    </view>
+  </view>
+  <view class="confirm_btn" catchtap="doneClick">完成</view>
+</view>

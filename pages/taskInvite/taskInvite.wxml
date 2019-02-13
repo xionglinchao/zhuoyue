@@ -1,0 +1,59 @@
+<view class="page_box">
+  <view style="width:100%;height:10rpx;"></view>
+  <!-- 登记表 -->
+  <view class="form_box">
+    <!-- <block wx:if="{{ defaultOption }}"> -->
+      <view class="course_info">
+        <image class="course_pic" mode="aspectFill" src="{{ 'https://www.hzsimple.com' + taskDetail.image }}"></image>
+        <view class="base_info">
+          <text class="form_title beyondEllipsis">{{ taskDetail.title }}</text>
+          <view class="area_time_box">
+            <view class="area_box">
+              <text class="iconfont icon-map mapIcon"></text>
+              <text class="area_name">{{ taskDetail.city }}</text>
+            </view>
+            <view class="date_box">
+              <text class="iconfont icon-calendar calendarIcon"></text>
+              <text class="date">{{ taskDetail.create_time }}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    <!-- </block> -->
+    <!-- <block wx:else>
+      <view class="default">请设置默认登记表</view>
+    </block> -->
+    <!-- <text class="iconfont icon-arrowRight arrowRightIcon"></text> -->
+  </view>
+  <view class="color_line_box">
+    <image class="color_line" src="/images/registrationForm/line.png"></image>
+  </view>
+  <!-- 联系信息 -->
+  <view class="contact_info">
+    <view class="contact_person">
+      <text class="contact_title">联系人</text>
+      <view class="input_box">
+        <input class="input_bar" value="{{ nameValue }}" bindinput="nameInput" placeholder="姓名" placeholder-class="name_tip"></input>
+        <view class="gender">
+          <text class="man {{ gender ? 'active':'' }}" catchtap="chooseMan">先生</text>
+          <text class="woman {{ gender ? '':'active' }}" catchtap="chooseWoman">女士</text>
+        </view>
+      </view>
+    </view>
+    <view class="contact_phone">
+      <text class="phone">电话</text>
+      <input class="input_bar sec" value="{{ phoneValue }}" bindinput="phoneInput" placeholder="手机号码" maxlength="11" type="number" placeholder-class="name_tip"></input>
+    </view>
+    <view class="contact_phone">
+      <text class="phone">年龄</text>
+      <input class="input_bar sec" value="{{ ageValue }}" bindinput="ageInput" placeholder="出生年龄" type="number" placeholder-class="name_tip"></input>
+    </view>
+    <view class="contact_phone">
+      <text class="phone">备注</text>
+      <input class="input_bar sec" value="{{ noteValue }}" bindinput="noteInput" placeholder="选填" placeholder-class="name_tip"></input>
+    </view>
+  </view>
+  <view class="submit_btn" catchtap="confirmBtnClick">提交</view>
+</view>
+<!-- 底部导航栏组件引用 -->
+<nav tabIdx="1"></nav>

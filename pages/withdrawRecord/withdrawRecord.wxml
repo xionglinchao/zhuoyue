@@ -1,0 +1,42 @@
+<view>
+  <view class="fixed_box">
+    <view class="month_profit">
+      <picker mode="date" fields="month" bindchange="chooseDate">
+        <view class="each_month">
+          <text class="year_month">{{ currentYear }}年{{ currentMonth }}月</text>
+          <text class="iconfont icon-arrowDown arrowDownIcon"></text>
+        </view>
+      </picker>
+      <!-- <view class="profit_record">
+        <text class="spending">支出 ￥{{ spending }}</text>
+        <text class="earning">收入 ￥{{ income }}</text>
+      </view> -->
+    </view>
+  </view>
+  <!-- 收支列表 -->
+  <view class="record_list_box">
+    <block wx:for="{{ contentlist }}" wx:key>
+      <view class="balance_payment" catchtap="toRecordProcess" data-item="{{ item }}">
+        <view class="expense">
+          <block wx:if="{{ item.status == 0 }}">
+            <text class="payment_words beyondEllipsis">未结算</text>
+          </block>
+          <block wx:elif="{{ item.status == 1 }}">
+            <text class="payment_words beyondEllipsis">已提现</text>
+          </block>
+          <block wx:elif="{{ item.status == 2 }}">
+            <text class="payment_words beyondEllipsis">提现失败</text>
+          </block>
+          <block wx:else>
+            <text class="payment_words beyondEllipsis">处理中</text>
+          </block>
+          <text class="money_sec">{{ '-' + item.amt }}</text>
+        </view>
+        <view class="income">
+          <text class="time">{{ item.create_at }}</text>
+          <!-- <text class="money">余额: {{ item.amt_lasttime }}</text> -->
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

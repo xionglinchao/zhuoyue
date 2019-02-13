@@ -1,0 +1,37 @@
+<view>
+  <view class="fixed_part">
+    <view class="search_box">
+      <text class="iconfont icon-search searchIcon"></text>
+      <input class="input_bar" placeholder="城市/拼音" placeholder-style="font-size:20rpx;"></input>
+    </view>
+  </view>
+
+  <view class="scroll_part">
+    <view class="location">当前定位城市</view>
+    <view class="current_location">
+      <view class="city_box">
+        <text class="iconfont icon-map2 mapIcon"></text>
+        <text class="current_city">苏州市昆山市</text>
+      </view>
+      <view class="county_box">
+        <text class="county">选择区县</text>
+        <text class="iconfont icon-arrowDown arrowDownIcon"></text>
+      </view>
+    </view>
+    <view class="choose_list">
+      <view class="single_area" wx:for="{{ 9 }}" wx:key>全城</view>
+    </view>
+    <view class="location">热门城市</view>
+    <view class="choose_list">
+      <view class="single_area" wx:for="{{ 9 }}" wx:key>全城</view>
+    </view>
+    <!-- A-Z -->
+    <view wx:for="{{ 5 }}" wx:key>
+      <view class="location">A</view>
+      <view class="detailed_place" wx:for="{{ 4 }}" wx:key>鞍山</view>
+    </view>
+  </view>
+  <view class="letter_box">
+    <view class="letter" wx:for="{{ 26 }}" wx:key>A</view>
+  </view>
+</view>

@@ -1,0 +1,95 @@
+page {
+  width: 100%;
+  background: rgb(246, 246, 246);
+}
+
+.fixed_box {
+  width: 100%;
+  background: rgb(246, 246, 246);
+  position: fixed;
+  top: 0;
+}
+
+.profit_homeIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+}
+
+.homeIcon {
+  width: 56rpx;
+  height: 50rpx;
+}
+
+.month_profit {
+  display: flex;
+  flex-direction: column;
+}
+
+.each_month {
+  display: flex;
+  align-items: center;
+}
+
+.year_month {
+  font-size: 28rpx;
+  color: #292929;
+}
+
+.arrowDownIcon {
+  font-size: 32rpx;
+  color: #292929;
+}
+
+.profit_record {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #828282;
+  padding-top: 15rpx;
+}
+
+.earning {
+  padding-left: 26rpx;
+}
+
+.record_list_box {
+  padding-top: 144rpx;
+}
+
+.balance_payment {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  padding: 26rpx 30rpx;
+  border-bottom: 1rpx solid #eeeeee;
+}
+
+.expense {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.income {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10rpx;
+  color: #959595;
+}
+
+.payment_words, .time {
+  font-size: 28rpx;
+  max-width: 500rpx;
+}
+
+.money {
+  font-size: 28rpx;
+}
+
+.money_sec {
+  color: #42b72a;
+  font-size: 28rpx;
+}
